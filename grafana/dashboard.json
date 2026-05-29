@@ -1,0 +1,478 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "enable": true,
+        "hide": true,
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 100,
+      "title": "Row 1: Executive Overview",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "${datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 1
+      },
+      "id": 1,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "${datasource}"
+          },
+          "rawSql": "SELECT SUM(total_views) as value FROM ntk_dashboard.vw_executive_kpis",
+          "refId": "A"
+        }
+      ],
+      "title": "Total Video Views",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "${datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 1
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "${datasource}"
+          },
+          "rawSql": "SELECT SUM(total_posts) as value FROM ntk_dashboard.vw_executive_kpis",
+          "refId": "A"
+        }
+      ],
+      "title": "Total Posts Published",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "${datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "id": 3,
+      "options": {
+        "displayLabels": [
+          "percent",
+          "value"
+        ],
+        "legend": {
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "pieType": "donut",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "${datasource}"
+          },
+          "rawSql": "SELECT platform, total_engagement FROM ntk_dashboard.vw_executive_kpis",
+          "refId": "A"
+        }
+      ],
+      "title": "Engagement Share by Platform",
+      "type": "piechart"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 11
+      },
+      "id": 110,
+      "title": "Row 2: Platform Comparison",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "${datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 12
+      },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "${datasource}"
+          },
+          "rawSql": "SELECT month, platform, total_reach FROM ntk_dashboard.vw_monthly_reach_trend ORDER BY month",
+          "refId": "A"
+        }
+      ],
+      "title": "Monthly Reach Trend by Platform",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "${datasource}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 12
+      },
+      "id": 5,
+      "options": {
+        "showHeader": true,
+        "sortBy": []
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "${datasource}"
+          },
+          "rawSql": "SELECT platform, total_engagement, total_reach, engagement_rate FROM ntk_dashboard.vw_platform_comparison",
+          "refId": "A"
+        }
+      ],
+      "title": "Platform Breakdown Comparison Table",
+      "type": "table"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 20
+      },
+      "id": 120,
+      "title": "Row 3: Content Performance",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "${datasource}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 21
+      },
+      "id": 6,
+      "options": {
+        "showHeader": true
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "${datasource}"
+          },
+          "rawSql": "SELECT rank, platform, caption, engagement, reach FROM ntk_dashboard.vw_content_performance WHERE rank <= 10 ORDER BY rank",
+          "refId": "A"
+        }
+      ],
+      "title": "Top 10 Performing Social Media Posts",
+      "type": "table"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 29
+      },
+      "id": 130,
+      "title": "Row 4: Sentiment Analytics (Tamil & Tanglish)",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "${datasource}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 30
+      },
+      "id": 7,
+      "options": {
+        "displayLabels": [
+          "percent"
+        ],
+        "legend": {
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "pieType": "pie"
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "${datasource}"
+          },
+          "rawSql": "SELECT sentiment, SUM(comment_count) as count FROM ntk_dashboard.vw_sentiment_summary GROUP BY sentiment",
+          "refId": "A"
+        }
+      ],
+      "title": "Comment Sentiment Distribution",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "${datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          }
+        }
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 30
+      },
+      "id": 8,
+      "options": {
+        "orientation": "auto"
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "${datasource}"
+          },
+          "rawSql": "SELECT target, stance, SUM(comment_count) as count FROM ntk_dashboard.vw_sentiment_summary GROUP BY target, stance",
+          "refId": "A"
+        }
+      ],
+      "title": "Stance Distribution Toward Entities",
+      "type": "barchart"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {},
+        "hide": 0,
+        "label": "Data Source",
+        "name": "datasource",
+        "options": [],
+        "query": "grafana-bigquery-datasource",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-30d",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "NTK Analytics Pipeline Dashboard",
+  "version": 2
+}

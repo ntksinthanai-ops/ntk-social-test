@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Mock Privacy Policy – Facebook Testing Environment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e9ebee;  /* classic Facebook light grey background */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            color: #1c1e21;
+            padding: 2rem 1rem;
+        }
+
+        /* Main card container — mimics Facebook's policy presentation */
+        .policy-container {
+            max-width: 980px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        /* header area with Meta / Facebook branding (testing mock) */
+        .policy-header {
+            background: #1877f2;  /* Facebook blue */
+            padding: 1.5rem 2rem;
+            color: white;
+            border-bottom: 1px solid #166fe5;
+        }
+
+        .policy-header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            margin-bottom: 0.25rem;
+        }
+
+        .policy-header .meta-sub {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            font-weight: normal;
+            margin-top: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        /* content area */
+        .policy-content {
+            padding: 2rem 2rem 2.5rem 2rem;
+        }
+
+        /* last updated + disclaimer */
+        .disclaimer-box {
+            background: #f0f2f5;
+            border-left: 4px solid #1877f2;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: #3e4042;
+        }
+
+        .disclaimer-box strong {
+            color: #1b1f23;
+        }
+
+        .last-updated {
+            font-size: 0.8rem;
+            color: #65676b;
+            margin-bottom: 1.8rem;
+            border-bottom: 1px solid #e4e6eb;
+            padding-bottom: 0.75rem;
+        }
+
+        /* typography */
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem 0;
+            color: #050505;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.5rem 0;
+            color: #1c1e21;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: #2d2f31;
+        }
+
+        ul, ol {
+            margin: 0.5rem 0 1.25rem 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        hr {
+            margin: 1.5rem 0;
+            border: none;
+            border-top: 1px solid #e4e6eb;
+        }
+
+        .highlight-mock {
+            background: #f7f9fc;
+            border: 1px solid #e2e6e9;
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-family: 'SF Mono', monospace;
+            font-size: 0.85rem;
+        }
+
+        .footer-note {
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #65676b;
+            border-top: 1px solid #e4e6eb;
+            padding-top: 1.5rem;
+        }
+
+        a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 680px) {
+            .policy-content {
+                padding: 1.5rem;
+            }
+            .policy-header {
+                padding: 1rem 1.5rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="policy-container">
+        <div class="policy-header">
+            <h1>Privacy Policy (Mock)</h1>
+            <div class="meta-sub">
+                <span>Facebook Testing Environment · Simulated Policy</span>
+                <span class="badge">FOR INTERNAL TESTING ONLY</span>
+            </div>
+        </div>
+
+        <div class="policy-content">
+            <div class="disclaimer-box">
+                <strong>📢 TESTING DISCLAIMER</strong><br>
+                This document is a <strong>mock privacy policy</strong> created exclusively for sandbox testing, QA automation, and UI validation of Facebook-related features. It does not represent actual legal terms or real data processing. No user data is collected beyond standard demo placeholders.
+            </div>
+
+            <div class="last-updated">
+                <strong>Last Revised:</strong> April 15, 2026 &nbsp;|&nbsp; <strong>Version:</strong> mock.fb.test.2.4
+            </div>
+
+            <p>
+                Welcome to the <strong>Mock Privacy Center</strong> — a simulated environment built to assist developers, testers, and product teams in verifying Facebook integration flows, consent UI patterns, and policy display logic. This document outlines sample data handling practices that mimic common social platform policies but <strong>carry no legal obligation</strong>. All information is fictional and used solely for testing Facebook API mock scenarios.
+            </p>
+
+            <h2>1. Information We Collect (Testing Context)</h2>
+            <p>
+                For demonstration and compatibility testing with Facebook Login, Graph API mocks, and Meta Business tools, this test environment <strong>does not store real user data</strong>. However, for realistic rendering, the following mock data categories may appear in logs or in-memory state during a testing session:
+            </p>
+            <ul>
+                <li><strong>Mock profile data:</strong> simulated name, email hash, profile picture placeholder (test user id: 123456789_test).</li>
+                <li><strong>Interaction signals:</strong> button clicks, policy acceptance timestamps (local session only).</li>
+                <li><strong>Device & browser info:</strong> user agent, viewport size, preferred language – stored ephemerally.</li>
+                <li><strong>Facebook test user tokens:</strong> synthetic OAuth tokens generated by Facebook's test user infrastructure (managed via Meta developer tools).</li>
+            </ul>
+            <p>
+                No sensitive personal information (government IDs, financial data, health information) is ever requested or processed in this mock policy.
+            </p>
+
+            <h2>2. How We Use Mock Information</h2>
+            <p>
+                Any mock data collected is used strictly for the following simulation purposes:
+            </p>
+            <ul>
+                <li>✅ Validate that Facebook privacy interfaces render correctly.</li>
+                <li>✅ Test consent management flows (e.g., "Accept", "Reject", "Learn More").</li>
+                <li>✅ Simulate data deletion / download requests to align with Meta review requirements.</li>
+                <li>✅ Debug UI components that reference legal documents inside Facebook Canvas apps or Page tabs.</li>
+            </ul>
+            <p>
+                After each test session (or within 24 hours), all simulated data is automatically discarded. No persistent storage is utilized.
+            </p>
+
+            <h2>3. Sharing & Third Parties (Mock Simulation)</h2>
+            <p>
+                Because this is a testing-only environment, we do NOT share mock data with external advertisers, analytics providers, or data brokers. However, to emulate realistic Facebook platform behavior, certain simulated interactions may involve:
+            </p>
+            <ul>
+                <li><strong>Facebook Test Infrastructure</strong> – if you are using Facebook's official test users, limited app-scoped identifiers may be passed to Meta servers for OAuth validation. Refer to <a href="#" rel="noopener">Meta’s actual Data Policy</a> for real-world details.</li>
+                <li><strong>Internal QA dashboards</strong> – anonymized logs containing error reports or feature flags (no personal identifiers).</li>
+                <li><strong>Mock webhooks</strong> – simulated event payloads that never contain actual PII.</li>
+            </ul>
+            <div class="highlight-mock">
+                🔍 <strong>TESTING NOTE:</strong> Any third-party service calls are only made toward endpoints explicitly defined in Facebook's developer sandbox (e.g., graph.facebook.com/v21.0/me?mock=1). No data is sold, licensed, or transferred.
+            </div>
+
+            <h2>4. Your Choices & Control (Mock Consent UI)</h2>
+            <p>
+                This mock privacy policy provides a demonstration of a consent management interface similar to what users might experience on Facebook. Testing participants (developers/QA engineers) can:
+            </p>
+            <ul>
+                <li><strong>Simulate opt-out:</strong> Use the “Reject optional mock data” button in the test harness (not shown on this static page, but part of the surrounding Facebook test suite).</li>
+                <li><strong>Request mock data export:</strong> A simulated data download generates a sample JSON file with placeholder attributes for test validation.</li>
+                <li><strong>Request deletion:</strong> In the test environment, deletion resets the mock user state without affecting real accounts.</li>
+            </ul>
+            <p>
+                Since this policy is a mock, actual users (non-testers) will never encounter this document on production Facebook surfaces.
+            </p>
+
+            <h2>5. Data Security (Simulated)</h2>
+            <p>
+                We follow basic security conventions for the testing environment — TLS encryption for any simulated API calls, no logging of secrets, and restricted access to internal test servers. However, as a mock environment, no real-world security guarantees are implied. Testers are responsible for using Facebook-provided test user credentials and avoiding accidental real user data.
+            </p>
+
+            <h2>6. International Data Transfers (Mock Clause)</h2>
+            <p>
+                For testing scenarios that involve multiple regions, this mock environment may simulate data flows consistent with standard contractual clauses. In reality, all demo data stays within the isolated test harness and never leaves the developer's local browser storage or Facebook’s test sandbox.
+            </p>
+
+            <h2>7. Children's Privacy (Mock Compliance)</h2>
+            <p>
+                This mock policy and associated test pages are not directed to individuals under the age of 13. No data, real or simulated, is knowingly collected from children. If you are testing COPPA-related flows, please use designated test accounts without any real child attributes.
+            </p>
+
+            <h2>8. Changes to This Mock Policy</h2>
+            <p>
+                As the Facebook testing requirements evolve, this mock privacy policy may be updated to reflect new UI patterns or consent checklists. The "Last Revised" date at the top of this document will indicate the latest version. Changes are effective immediately for test environments.
+            </p>
+
+            <h2>9. Contact (Testing Purpose Only)</h2>
+            <p>
+                For questions about this mock privacy policy or if you encounter issues while using it for Facebook testing, please reach out to the internal QA team at <strong>fb-mock-policy@example.com</strong> (not a real support channel). For any actual privacy concerns regarding the Facebook platform, please refer to Meta’s official Privacy Center.
+            </p>
+
+            <hr>
+
+            <h3>Additional Mock Addendum: Facebook Platform Testing Requirements</h3>
+            <p>
+                As part of the Facebook Login review process, developers often need to demonstrate where privacy policies are presented. This page serves as a self-contained placeholder that meets the following typical mock review criteria:
+            </p>
+            <ul>
+                <li>✔ Clear identification of the data controller (simulated: "MockFacebookTesting, Inc.").</li>
+                <li>✔ Disclosure of mock data categories and limited usage.</li>
+                <li>✔ Explanation of user rights and deletion simulation.</li>
+                <li>✔ Cookie and tracking notice – not applicable because no real tracking occurs.</li>
+            </ul>
+            <div class="highlight-mock">
+                ⚙️ <strong>Integration note for test automation:</strong> This single-file HTML can be embedded inside a WebView, served via localhost, or used as a static resource to verify Facebook OAuth dialogs and policy acceptance checkboxes.
+            </div>
+
+            <p>
+                By continuing to use this mock testing interface (or clicking "I Accept" in any associated test harness), you acknowledge that this is a non-binding simulation designed for <strong>Facebook testing only</strong> and does not create a legal agreement.
+            </p>
+
+            <div class="footer-note">
+                &copy; 2026 Mock Policy for Facebook Testing · No real data collection · Document ID: FB-MOCK-POL-2026-001<br>
+                This document is provided under the MIT License for testing and educational purposes.
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional inline script to add minimal interactive mock badge (purely cosmetic)
+         but still maintaining a single-file standalone feel. This script only shows 
+         a console test message and does NOT track user data. -->
+    <script>
+        (function() {
+            // This script is for demonstration purposes only.
+            // It ensures that the mock policy meets "testing environment" expectations,
+            // without setting cookies, localStorage, or sending analytics.
+            if (window.console && window.console.log) {
+                console.log("[FB Mock Privacy Policy] Loaded in testing mode. No real data collection.");
+                console.log("[Mock] This document is optimized for Facebook UI automation & sandbox verification.");
+            }
+            // Optional: Add a data attribute to indicate mock version for test selectors
+            const container = document.querySelector('.policy-container');
+            if (container) {
+                container.setAttribute('data-mock-policy-version', 'fb-test-2.4');
+                container.setAttribute('data-testid', 'fb-mock-privacy-policy');
+            }
+            // Provide a global mock reference for automated test frameworks (e.g., Jest, Selenium)
+            window.__FB_MOCK_PRIVACY_POLICY__ = {
+                version: '2.4',
+                purpose: 'Facebook test suite simulation',
+                isMock: true,
+                lastUpdated: '2026-04-15'
+            };
+        })();
+    </script>
+</body>
+</html>

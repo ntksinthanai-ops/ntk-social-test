@@ -1,0 +1,11 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // By default, deny all read/write access from the client side.
+    // Access is granted exclusively to Admin SDK/Service Account credentials.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
